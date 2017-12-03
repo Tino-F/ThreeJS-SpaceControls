@@ -287,28 +287,11 @@ THREE.SpaceControls = function ( camera, options ) {
 
   }
 
-  document.addEventListener('keydown', ( evnt ) => {
+  document.addEventListener('keydown', ( e ) => {
 
-  	//let evnt = window.event ? window.event : e;
+  	let evnt = window.event ? window.event : e;
 
     let negativeMax = this.maxSpeed * -1;
-
-    /*
-    switch ( evnt.keyCode ) {
-      case 70:
-        console.log('R down');
-      case 82:
-        console.log('F down');
-      case 87:
-        console.log('W down');
-      case 83:
-        console.log('S down');
-      case 68:
-        console.log('D down');
-      case 65:
-        console.log('A down');
-    };
-    */
 
   	if ( evnt.keyCode === 70 ) {
   		//R
@@ -392,27 +375,9 @@ THREE.SpaceControls = function ( camera, options ) {
 
   });
 
-  document.addEventListener('keyup', ( evnt ) => {
-  	//let evnt = window.event ? window.event : e;
-
-    /*
-    console.log( evnt.keyCode );
-
-    switch ( evnt.keyCode ) {
-      case 70:
-        console.log('R up');
-      case 82:
-        console.log('F up');
-      case 87:
-        console.log('W up');
-      case 83:
-        console.log('S up');
-      case 68:
-        console.log('D up');
-      case 65:
-        console.log('A up');
-    };
-    */
+  document.addEventListener('keyup', ( e ) => {
+  	
+	let evnt = window.event ? window.event : e;
 
   	if ( evnt.keyCode === 70 ) {
   		//R
